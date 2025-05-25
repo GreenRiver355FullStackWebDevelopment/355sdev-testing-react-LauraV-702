@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function AddRestaurant({ updateRestaurants }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,6 +14,7 @@ function AddRestaurant({ updateRestaurants }) {
     const value = e.target.value;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -20,7 +22,7 @@ function AddRestaurant({ updateRestaurants }) {
   };
 
   return (
-    <form data-cy="form-submit" onSubmit={handleSubmit}>
+    <form data-cy="rating-form" onSubmit={handleSubmit}>
       <div>
         <label>Name:</label>
         <input
